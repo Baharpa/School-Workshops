@@ -17,49 +17,43 @@
 
 namespace seneca {
 
+    template <typename T> class CharacterTpL : public Character {
+        int m_healthMax;
+        T m_health;
 
-	template<typename T>
-	class CharacterTpl : public Character {
-		//integer
-		//max health
-		T m_healthMax;
-		// when this value gets to 0 the patient dies
-		T m_health;
+    public:
+        CharacterTpL(const char* name, int healthMax)
+            : Character(name), m_healthMax(healthMax) {
+            m_health = (int)m_healthMax;
+        }
 
-	public:
-		CharacterTpl(char* ch1, T max) :
-			Character(ch1), m_healthMax(max)
-		{}
+        CharacterTpL(const CharacterTpL& other)
+            : Character(other.getName().c_str()), m_healthMax(other.m_healthMax) {
+            m_health = (int)other.m_healthMax;
+        }
 
-		void takeDamage(int dmg) override {
-			m_health -= dmg;
+        void takeDamage(int dmg) override {
+            m_health -= dmg;
+            if (m_health < 0) {
+                m_health = 0;
+            }
 
-			// the way to write Master Chief took 46 damage, 954 health remaining.
-			if (m_health > 0) {
-				std::cout << getName() << " took" << dmg << " damage, " << m_health << " health remaining." << std::endl;
-			}
-			else {
-				std::cout << getName() << "has been defeated!" << std::endl;
-			}
-		}
+            if (Character::isAlive() == false) {
+                std::cout << "    " << Character::getName() << " has been defeated!\n";
+            }
+            else {
+                std::cout << "    " << Character::getName() << " took " << dmg
+                    << " damage, " << getHealth() << " health remaining.\n";
+            }
+        }
 
-		int getHealth() const override {
-			return static_cast<int>(m_health);
-		}
+        int getHealth() const override { return static_cast<int>(m_health); }
 
-		int getHealthMax() const override {
-			return static_cast<int>(m_healthMax);
-		}
+        int getHealthMax() const override { return m_healthMax; }
 
-		void setHealth(int health) override {
-			m_health = static_cast<T>(health);
-		}
+        void setHealth(int health) override { m_health = health; }
 
-		void setHealthMax(int healthmax) override {
-			m_healthMax = static_cast<T>(healthmax);
-		}
-
-	};
-
+        void setHealthMax(int health) override { m_healthMax = health; }
+    };
 
 }

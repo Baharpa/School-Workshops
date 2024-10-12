@@ -1,20 +1,37 @@
-﻿  tester_1.cpp
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(11,39): error C2143: syntax error: missing ',' before '<'
+﻿  guild.cpp
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\guild.h(19,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'guild.cpp')
+  
+  team.cpp
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\team.h(19,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'team.cpp')
+  
+  tester_1.cpp
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\team.h(19,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'tester_1.cpp')
-  C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(11,39):
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\guild.h(19,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'tester_1.cpp')
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(30,68): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'tester_1.cpp')
+  C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(30,68):
   the template instantiation context (the oldest one first) is
-  	C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(48,3):
-  	see reference to class template instantiation 'seneca::Barbarian<T,Ability_t,Weapon_t>' being compiled
+  	C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\tester_1.cpp(71,31):
+  	see reference to class template instantiation 'seneca::Archer<seneca::Bow>' being compiled
+  	C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(30,13):
+  	while compiling class template member function 'int seneca::Archer<seneca::Bow>::getDefenseAmnt(void) const'
+  		C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(46,17):
+  		see the first reference to 'seneca::Archer<seneca::Bow>::getDefenseAmnt' in 'seneca::Archer<seneca::Bow>::takeDamage'
   
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,18): error C2760: syntax error: '<' was unexpected here; expected '{'
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(28,66): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   (compiling source file 'tester_1.cpp')
+  C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(28,66):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(28,13):
+  	while compiling class template member function 'int seneca::Archer<seneca::Bow>::getAttackAmnt(void) const'
+  		C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\archer.h(37,21):
+  		see the first reference to 'seneca::Archer<seneca::Bow>::getAttackAmnt' in 'seneca::Archer<seneca::Bow>::attack'
   
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,20): error C2059: syntax error: '>'
-  (compiling source file 'tester_1.cpp')
-  
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,92): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-  (compiling source file 'tester_1.cpp')
-  
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(18,1): error C1903: unable to recover from previous error(s); stopping compilation
-  (compiling source file 'tester_1.cpp')
-  
+  Generating Code...
+  workshop2.vcxproj -> C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\x64\Debug\workshop2.exe

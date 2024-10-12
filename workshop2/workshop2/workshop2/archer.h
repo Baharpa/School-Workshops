@@ -1,59 +1,73 @@
 #ifndef SENECA_ARCHER_H
 #define SENECA_ARCHER_H
+
+
+
+/*
+Name: Bahar
+Last name: Parsaeian
+Class: OOP345 NEE
+Prof: Masood Khan Patel
+Workshop : 2
+
+Integrity: I have completed the entire assignment by myself
+with no use of other people's sources.
+
+
+*/
+#include "characterTpl.h"
+#include "health.h"
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include "weapons.h"
-#include "characterTpI.cpp"
-#include "character.h"
 
-namespace myseneca{
-template <typename Weapon_t>
-class Archer : public CharacterTpL<seneca::SuperHealth> {
-	int m_baseDefense; 
-	int m_baseAttack; 
-	Weapon_t m_weapon; 
+namespace seneca {
 
-public: 
-	Archer(const char* name, int healthMax, int baseAttack, int baseDefense, Weapon_t weapon) :
-		: 
-		CharacterTpl<seneca::SuperHealth>(name, healthMax),
-		m_baseAttack(baseAttack),
-		m_baseDefense(baseDefense),
-		m_weapon(weapon) 
-	{}
-	int getAttackAmnt() const override {
-		return static_cast<int>(1.3 * m_baseAttack);
-	}
+    template <typename Weapon_t> class Archer : public CharacterTpL<SuperHealth> {
+        int m_baseAttack;
+        int m_baseDefense;
 
-	int getDefenseAmnt() const override {
-		return static_cast<int>(1.2 * m_baseDefense);
-	}
+        Weapon_t m_weapon;
 
-	Character* clone() const override {
-		return new <Weapon_t>(*this); 
-	}
+    public:
+        Archer(const char* name, int healthMax, int baseAttack, int baseDefense,
+            Weapon_t weapon)
+            : CharacterTpL<SuperHealth>(name, healthMax), m_baseAttack(baseAttack),
+            m_baseDefense(baseDefense), m_weapon(weapon) {}
 
-	void attack(Character* enemy) {
-		std::cout << this->m_name << "is attacking" << enemy->getName() << "." << std::endl;
+        Archer(const Archer& other) : CharacterTpL<SuperHealth>(other) {
+            m_baseAttack = other.m_baseAttack;
+            m_baseDefense = other.m_baseDefense;
+            m_weapon = other.m_weapon;
+        }
 
-		int damage = getAttackAmnt(); 
+        int getAttackAmnt() const override { return m_baseAttack * 1.3; }
 
-		std::cout << "Archer deals " << damage << " ranged damage!" << std::endl;
+        int getDefenseAmnt() const override { return m_baseDefense * 1.2; }
 
-		enemy->takeDamage(damage);
+        Character* clone() const override { return new Archer(*this); }
 
+        void attack(Character* enemy) override {
+            std::cout << CharacterTpL<SuperHealth>::getName() << " is attacking "
+                << enemy->getName() << ".\n";
+            int dmg = getAttackAmnt();
+            std::cout << "Archer deals " << dmg << " ranged damage!\n";
+            enemy->takeDamage(dmg);
+        }
 
-		void takeDamage(int dmg) override {
-			std::cout << this->getName() << " is attacked for " << dmg << " damage." << std::endl;
-			std::cout << "Archer has a defense of " << getDefenseAmnt() << ". Reducing damage received." << std::endl;
+        void takeDamage(int dmg) override {
+            std::cout << CharacterTpL<SuperHealth>::getName() << " is attacked for "
+                << dmg << "damage.\n";
+            std::cout << "    Archer has a defense of " << getDefenseAmnt()
+                << ". Reducing damage received.\n";
 
-			dmg -= getDefenseAmnt();
-			if (dmg < 0) dmg = 0;  
+            dmg -= getDefenseAmnt();
+            if (dmg < 0) {
+                dmg = 0;
+            }
 
-			CharacterTpl<seneca::SuperHealth>::takeDamage(dmg);
-		}
-	}
-};
-}
+            CharacterTpL<SuperHealth>::takeDamage(dmg);
+        }
+    };
+
+} 
+
 #endif
