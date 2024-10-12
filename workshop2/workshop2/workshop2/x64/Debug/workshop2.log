@@ -1,3 +1,20 @@
 ﻿  tester_1.cpp
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\x64\Debug\workshop2.exe : fatal error LNK1120: 1 unresolved externals
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(11,39): error C2143: syntax error: missing ',' before '<'
+  (compiling source file 'tester_1.cpp')
+  C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(11,39):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(48,3):
+  	see reference to class template instantiation 'seneca::Barbarian<T,Ability_t,Weapon_t>' being compiled
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,18): error C2760: syntax error: '<' was unexpected here; expected '{'
+  (compiling source file 'tester_1.cpp')
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,20): error C2059: syntax error: '>'
+  (compiling source file 'tester_1.cpp')
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(19,92): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'tester_1.cpp')
+  
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\workshop2\barbarian.h(18,1): error C1903: unable to recover from previous error(s); stopping compilation
+  (compiling source file 'tester_1.cpp')
+  

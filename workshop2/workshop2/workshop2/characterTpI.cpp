@@ -19,15 +19,15 @@ namespace seneca {
 
 
 	template<typename T>
-	class characterTpl : public Character {
+	class CharacterTpl : public Character {
 		//integer
 		//max health
-		H m_healthMax;
+		T m_healthMax;
 		// when this value gets to 0 the patient dies
 		T m_health;
 
 	public:
-		characterTpl(char* ch1, T max) :
+		CharacterTpl(char* ch1, T max) :
 			Character(ch1), m_healthMax(max)
 		{}
 
@@ -36,7 +36,7 @@ namespace seneca {
 
 			// the way to write Master Chief took 46 damage, 954 health remaining.
 			if (m_health > 0) {
-				std::cout << getName() << " took" << dmg << " damage, " << m_health << " health remaining." << std::endl >
+				std::cout << getName() << " took" << dmg << " damage, " << m_health << " health remaining." << std::endl;
 			}
 			else {
 				std::cout << getName() << "has been defeated!" << std::endl;
@@ -48,7 +48,7 @@ namespace seneca {
 		}
 
 		int getHealthMax() const override {
-			return static_cast<int>(m_healthMax)l;
+			return static_cast<int>(m_healthMax);
 		}
 
 		void setHealth(int health) override {
