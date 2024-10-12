@@ -18,5 +18,37 @@
     <ClCompile Include="tester_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="characterTpI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="abilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="archer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="barbarian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="guild.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="health.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rogue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="team.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weapons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
