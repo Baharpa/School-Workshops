@@ -1,0 +1,3 @@
+﻿  tester_1.cpp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Bpars\OneDrive\Desktop\oop345 september\Workshops\workshop2\workshop2\x64\Debug\workshop2.exe : fatal error LNK1120: 1 unresolved externals
