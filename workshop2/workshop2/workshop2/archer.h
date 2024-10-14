@@ -1,8 +1,5 @@
 #ifndef SENECA_ARCHER_H
 #define SENECA_ARCHER_H
-
-
-
 /*
 Name: Bahar
 Last name: Parsaeian
@@ -21,7 +18,8 @@ with no use of other people's sources.
 
 namespace seneca {
 
-    template <typename Weapon_t> class Archer : public CharacterTpL<SuperHealth> {
+    template <typename Weapon_t> 
+    class Archer : public CharacterTpL<SuperHealth> {
         int m_baseAttack;
         int m_baseDefense;
 

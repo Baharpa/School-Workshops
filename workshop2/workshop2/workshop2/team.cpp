@@ -1,5 +1,6 @@
 #include "team.h"
-
+#include <iostream>
+#include <string>
 /*
 Name: Bahar
 Last name: Parsaeian
@@ -12,12 +13,92 @@ with no use of other people's sources.
 
 
 */
-#include <iostream>
-#include <string>
-
 using namespace std;
-
 namespace seneca {
+
+    int Team::findMember(const std::string& c) const {
+        for (size_t i = 0; i < m_size; ++i) {
+            if (m_team[i]->getName() == c) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    Team::Team()
+        : m_size(0), m_capacity(2), m_team(new Character* [m_capacity]),
+        m_name("") {}
+
+    Team::Team(const char* name)
+        : m_size(0), m_capacity(2), m_team(new Character* [m_capacity]),
+        m_name(name) {}
+
+    Team::Team(const Team& other) {
+        m_size = other.m_size;
+        m_capacity = other.m_capacity;
+        m_team = new Character * [m_capacity];
+        for (size_t i = 0; i < m_size; ++i) {
+            m_team[i] = other.m_team[i]->clone();
+        }
+        m_name = other.m_name;
+    }
+
+    Team& Team::operator=(const Team& other) {
+        if (this != &other) {
+            for (size_t i = 0; i < m_size; ++i) {
+                delete m_team[i];
+            }
+            delete[] m_team;
+
+            m_size = other.m_size;
+            m_capacity = other.m_capacity;
+            m_team = new Character * [m_capacity];
+            for (size_t i = 0; i < m_size; ++i) {
+                m_team[i] = other.m_team[i]->clone();
+            }
+            m_name = other.m_name;
+        }
+        return *this;
+    }
+
+    Team::Team(Team&& other) noexcept {
+        m_size = other.m_size;
+        m_capacity = other.m_capacity;
+        m_team = other.m_team;
+        m_name = other.m_name;
+
+        other.m_size = 0;
+        other.m_capacity = 0;
+        other.m_team = nullptr;
+        other.m_name = "";
+    }
+
+    Team& Team::operator=(Team&& other) noexcept {
+        if (this != &other) {
+            for (size_t i = 0; i < m_size; ++i) {
+                delete m_team[i];
+            }
+            delete[] m_team;
+
+            m_size = other.m_size;
+            m_capacity = other.m_capacity;
+            m_team = other.m_team;
+            m_name = other.m_name;
+
+            other.m_size = 0;
+            other.m_capacity = 0;
+            other.m_team = nullptr;
+            other.m_name = "";
+        }
+        return *this;
+    }
+
+    Team::~Team() {
+        for (size_t i = 0; i < m_size; ++i) {
+            delete m_team[i];
+        }
+        delete[] m_team;
+    }
 
     void Team::addMember(const Character* c) {
         if (findMember(c->getName()) != -1) {
@@ -70,4 +151,4 @@ namespace seneca {
         }
     }
 
-} 
+}

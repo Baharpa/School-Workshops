@@ -1,6 +1,6 @@
 #ifndef SENECA_ROGUE_H
 #define SENECA_ROGUE_H
-//deleted the unnecessary <include> in most of my files to make it more near 
+//deleted the unnecessary <include> 
 #include "weapons.h"
 /*
 Name: Bahar

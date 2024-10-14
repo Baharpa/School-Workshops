@@ -1,8 +1,5 @@
 #ifndef SENECA_CHARACTERTPL_H
 #define SENECA_CHARACTERTPL_H
-
-
-
 /*
 Name: Bahar
 Last name: Parsaeian
@@ -15,7 +12,6 @@ with no use of other people's sources.
 
 
 */
-
 #include "character.h"
 #include <iostream>
 

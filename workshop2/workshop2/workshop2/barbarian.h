@@ -1,8 +1,5 @@
-
 #ifndef SENECA_BARBARIAN_H
 #define SENECA_BARBARIAN_H
-
-
 /*
 Name: Bahar
 Last name: Parsaeian
@@ -11,11 +8,10 @@ Prof: Masood Khan Patel
 Workshop : 2
 
 Integrity: I have completed the entire assignment by myself
-with no use of other people's sources. 
+with no use of other people's sources.
 
 
 */
-
 #include "characterTpl.h"
 #include <iostream>
 #include <cmath>  
@@ -58,7 +54,6 @@ namespace seneca {
                 return m_baseAttack + static_cast<int>(m_weapon[0] / 2.0) + static_cast<int>(m_weapon[1] / 2.0);
             }
         }
-
 
         int getDefenseAmnt() const override { return m_baseDefense; }
 

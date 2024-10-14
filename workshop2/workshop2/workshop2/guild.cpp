@@ -1,8 +1,7 @@
 
+#include "guild.h"
 #include <iostream>
 #include <string>
-#include "guild.h"
-
 /*
 Name: Bahar
 Last name: Parsaeian
@@ -16,8 +15,66 @@ with no use of other people's sources.
 
 */
 using namespace std;
-
 namespace seneca {
+
+    Guild::Guild(const Guild& other) {
+        m_size = other.m_size;
+        m_capacity = other.m_capacity;
+        m_members = new Character * [m_capacity];
+        for (size_t i = 0; i < m_size; ++i) {
+            m_members[i] = other.m_members[i];
+        }
+        m_name = other.m_name;
+    }
+
+    Guild& Guild::operator=(const Guild& other) {
+        if (this != &other) {
+            delete[] m_members;
+
+            m_size = other.m_size;
+            m_capacity = other.m_capacity;
+            m_members = new Character * [m_capacity];
+            for (size_t i = 0; i < m_size; ++i) {
+                m_members[i] = other.m_members[i];
+            }
+            m_name = other.m_name;
+        }
+
+        return *this;
+    }
+
+    Guild::Guild(Guild&& other) noexcept {
+        m_size = other.m_size;
+        m_capacity = other.m_capacity;
+        m_members = other.m_members;
+        m_name = other.m_name;
+
+        other.m_size = 0;
+        other.m_capacity = 0;
+        other.m_members = nullptr;
+        other.m_name = "";
+    }
+
+    Guild& Guild::operator=(Guild&& other) noexcept {
+        if (this != &other) {
+            delete[] m_members;
+
+            m_size = other.m_size;
+            m_capacity = other.m_capacity;
+            m_members = other.m_members;
+            m_name = other.m_name;
+
+            other.m_size = 0;
+            other.m_capacity = 0;
+            other.m_members = nullptr;
+            other.m_name = "";
+        }
+        return *this;
+    }
+
+    Guild::~Guild() {
+        delete[] m_members;
+    }
 
     void Guild::addMember(Character* c) {
         int index = findMember(c->getName());
@@ -66,7 +123,7 @@ namespace seneca {
 
     void Guild::showMembers() const {
         if (m_capacity == 0) {
-            cout << "No guild." << m_name << "\n";
+            cout << "No guild. " << m_name << "\n";
             return;
         }
 
@@ -76,4 +133,4 @@ namespace seneca {
         }
     }
 
-}
+} 
