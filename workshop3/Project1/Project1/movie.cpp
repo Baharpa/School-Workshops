@@ -36,31 +36,26 @@ namespace seneca {
     }
 
 
+    //had to make it like this
     Movie* Movie::createItem(const std::string& strMovie) {
         if (strMovie.empty() || strMovie[0] == '#') {
             throw "Not a valid movie.";
         }
 
-        Movie* movie = new Movie();
+        std::istringstream stream(strMovie);
+        std::string title, yearStr, summary;
 
-        std::string temp = strMovie;
-        size_t pos = 0;
+        std::getline(stream, title, ',');
+        std::getline(stream, yearStr, ',');
+        std::getline(stream, summary);
 
-        pos = temp.find(',');
-        std::string strTitle = temp.substr(0, pos);
-        MediaItem::trim(strTitle);
-        movie->setTitle(strTitle);
-        temp = temp.substr(pos + 1);
+        trim(title);
+        trim(yearStr);
+        trim(summary);
 
-        pos = temp.find(',');
-        std::string strYear = temp.substr(0, pos);
-        MediaItem::trim(strYear);
-        movie->setYear(std::stoi(strYear));
-        temp = temp.substr(pos + 1);
+        unsigned short year = std::stoi(yearStr);
 
-        MediaItem::trim(temp);
-        movie->setSummary(temp);
-        return movie;
+        return new Movie(title, summary, year);
     }
 
 
