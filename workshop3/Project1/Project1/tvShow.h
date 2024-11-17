@@ -26,7 +26,15 @@ namespace seneca {
         std::string m_title{};            
         std::string m_summary{};           
 
-     
+        // added this as one of the final changes
+        TvEpisode(const TvShow* show, unsigned short numberOverall, unsigned short season,
+            unsigned short numberInSeason, const std::string& airDate,
+            unsigned int length, const std::string& title,
+            const std::string& summary)
+            : m_show(show), m_numberOverall(numberOverall), m_season(season),
+            m_numberInSeason(numberInSeason), m_airDate(airDate), m_length(length),
+            m_title(title), m_summary(summary) {}
+
     };
 
     class TvShow : public MediaItem {
@@ -35,6 +43,7 @@ namespace seneca {
 
         TvShow(const std::string& id, const std::string& title, const std::string& summary, unsigned short year)
             : MediaItem(title, summary, year), m_id(id) {}
+
 
     public:
 
