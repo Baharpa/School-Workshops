@@ -60,27 +60,41 @@ namespace seneca {
     }
 
 
-    TvShow* TvShow::createItem(const std::string& strShow) {
-        if (strShow.empty() || strShow[0] == '#') {
+    TvShow* TvShow::createItem(const std::string& strTvShow) {
+        if (strTvShow.empty() || strTvShow[0] == '#') {
             throw "Not a valid show.";
         }
 
-        std::istringstream stream(strShow);
-        std::string id, title, yearStr, summary;
+        TvShow* tvShow = new TvShow();
 
-        std::getline(stream, id, ',');
-        std::getline(stream, title, ',');
-        std::getline(stream, yearStr, ',');
-        std::getline(stream, summary);
+        std::string temp = strTvShow;
+        size_t pos = 0;
 
-        trim(id);
-        trim(title);
-        trim(yearStr);
-        trim(summary);
 
-        unsigned short year = std::stoi(yearStr);
+        pos = temp.find(',');
+        tvShow->m_id = temp.substr(0, pos);
+        MediaItem::trim(tvShow->m_id);
+        temp = temp.substr(pos + 1);
 
-        return new TvShow(id, title, summary, year);
+
+        pos = temp.find(',');
+        std::string strTitle = temp.substr(0, pos);
+        MediaItem::trim(strTitle);
+        tvShow->setTitle(strTitle);
+        temp = temp.substr(pos + 1);
+
+
+        pos = temp.find(',');
+        std::string strYear = temp.substr(0, pos);
+        MediaItem::trim(strYear);
+        tvShow->setYear(std::stoi(strYear));
+        temp = temp.substr(pos + 1);
+
+
+        MediaItem::trim(temp);
+        tvShow->setSummary(temp);
+
+        return tvShow;
     }
 
 
