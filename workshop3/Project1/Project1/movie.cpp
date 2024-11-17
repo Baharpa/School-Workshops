@@ -50,7 +50,8 @@ namespace seneca {
     }
 
 
-    //had to make it like this
+    // had to make it like this, even though you showed another way, i could not
+    // work with that way. I used getline because thats how i remember it
     Movie* Movie::createItem(const std::string& strMovie) {
         if (strMovie.empty() || strMovie[0] == '#') {
             throw "Not a valid movie.";

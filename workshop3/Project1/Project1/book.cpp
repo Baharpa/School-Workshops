@@ -1,10 +1,19 @@
+/*
+Name : Bahar Parsaeian
+Email: bparsaeian@myseneca.ca
+Student ID: 118314210
+Date: 2024-11-12
 
+Academic Integrity:
+I declare that this submission is the result of my own work and I only copied the code that my professor provided to complete my workshops and assignments. This submitted piece of work has not been shared with any other student or 3rd party content provider.
+
+*/
 #include "book.h"
 #include <sstream>
 
 namespace seneca {
 
-
+    // copy pasted from the readme file of the instructions
     void Book::display(std::ostream& out) const {
         if (g_settings.m_tableView) {
             out << "B | ";
@@ -38,9 +47,12 @@ namespace seneca {
         }
     }
 
-
+    // again i had to use getline because I remmeber and know it better from last semester, 
+    // everything else i did the way you asked and taught us
     Book* Book::createItem(const std::string& strBook) {
+
         if (strBook.empty() || strBook[0] == '#') {
+
             throw "Not a valid book."; 
         }
 

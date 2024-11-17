@@ -1,4 +1,13 @@
+/*
+Name : Bahar Parsaeian
+Email: bparsaeian@myseneca.ca
+Student ID: 118314210
+Date: 2024-11-12
 
+Academic Integrity:
+I declare that this submission is the result of my own work and I only copied the code that my professor provided to complete my workshops and assignments. This submitted piece of work has not been shared with any other student or 3rd party content provider.
+
+*/
 #include "collection.h"
 #include <stdexcept>
 #include <iomanip>
@@ -54,7 +63,7 @@ namespace seneca {
     MediaItem* Collection::operator[](size_t idx) const {
         if (idx >= m_items.size()) {
             throw std::out_of_range("Bad index [" + std::to_string(idx) +
-                "]. Collection has [" + std::to_string(m_items.size()) + "] items."); // throw out of range exception
+                "]. Collection has [" + std::to_string(m_items.size()) + "] items."); 
         }
         return m_items[idx];
     }

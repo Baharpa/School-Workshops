@@ -1,3 +1,13 @@
+/*
+Name : Bahar Parsaeian
+Email: bparsaeian@myseneca.ca
+Student ID: 118314210
+Date: 2024-11-12
+
+Academic Integrity:
+I declare that this submission is the result of my own work and I only copied the code that my professor provided to complete my workshops and assignments. This submitted piece of work has not been shared with any other student or 3rd party content provider.
+
+*/
 #include "tvShow.h"
 #include <sstream>
 #include <iomanip>
@@ -100,8 +110,8 @@ namespace seneca {
         std::list<std::string> longEpisodes;
 
         std::for_each(m_episodes.begin(), m_episodes.end(),
-            [&](const TvEpisode& episode) {       
-                if (episode.m_length >= 3600) { 
+            [&](const TvEpisode& episode) {
+                if (episode.m_length >= 3600) {
                     longEpisodes.push_back(episode.m_title);
                 }
             });
