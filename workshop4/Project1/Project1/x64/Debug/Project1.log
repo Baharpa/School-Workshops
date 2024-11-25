@@ -1,0 +1,255 @@
+﻿  LineManager.cpp
+  Station.cpp
+  tester_1.cpp
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(23,2): error C2255: 'friend': not allowed outside of a class definition
+  (compiling source file 'tester_1.cpp')
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(20,59): error C2039: 'Station': is not a member of 'seneca'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(7,11):
+  see declaration of 'seneca'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(20,59): error C2065: 'Station': undeclared identifier
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(20,44): error C2923: 'std::vector': 'Station' is not a valid template type argument for parameter '_Ty'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(20,59):
+  see declaration of 'Station'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(20,44): error C2976: 'std::vector': too few template arguments
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(436,1):
+  see declaration of 'std::vector'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,22): error C2039: 'Station': is not a member of 'seneca'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(7,11):
+  see declaration of 'seneca'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,22): error C2065: 'Station': undeclared identifier
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,7): error C2923: 'std::vector': 'Station' is not a valid template type argument for parameter '_Ty'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,22):
+  see declaration of 'Station'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,7): error C2976: 'std::vector': too few template arguments
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(436,1):
+  see declaration of 'std::vector'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,31): error C2133: 'theStations': unknown size
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(34,31): error C2512: 'std::vector': no appropriate default constructor available
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(436,1):
+  see declaration of 'std::vector'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(37,22): error C2248: 'seneca::Utilities::setDelimiter': cannot access private member declared in class 'seneca::Utilities'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(18,15):
+  see declaration of 'seneca::Utilities::setDelimiter'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(9,8):
+  see declaration of 'seneca::Utilities'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(39,22): error C2248: 'seneca::Utilities::setDelimiter': cannot access private member declared in class 'seneca::Utilities'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(18,15):
+  see declaration of 'seneca::Utilities::setDelimiter'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(9,8):
+  see declaration of 'seneca::Utilities'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_begin': no overloaded function has valid conversion for 'this' pointer
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1858,43):
+  could be 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1854,37):
+  or       'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  while trying to match the argument list '()'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_end': no overloaded function has valid conversion for 'this' pointer
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1866,43):
+  could be 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1862,37):
+  or       'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(51,29):
+  while trying to match the argument list '()'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_begin': no overloaded function has valid conversion for 'this' pointer
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1858,43):
+  could be 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1854,37):
+  or       'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  while trying to match the argument list '()'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_end': no overloaded function has valid conversion for 'this' pointer
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1866,43):
+  could be 'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::const_pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Reason: cannot convert from 'std::vector' to 'const std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1862,37):
+  or       'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  	'allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::pointer std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(58,29):
+  while trying to match the argument list '()'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(66,36): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(66,36):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(67,44): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(67,44):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(68,44): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(68,44):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(69,36): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(69,36):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(70,2): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(70,2):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(71,36): error C2678: binary '[': no operator found which takes a left-hand operand of type 'std::vector' (or there is no acceptable conversion)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1900,40):
+  could be 'const _Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept const'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(1890,34):
+  or       '_Ty &std::vector<_Ty,_Alloc>::operator [](const allocator_traits<allocator_traits<_Alloc>::rebind_alloc<_Ty>>::size_type) noexcept'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(71,36):
+  while trying to match the argument list '(std::vector, int)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(90,22): error C2248: 'seneca::Utilities::setDelimiter': cannot access private member declared in class 'seneca::Utilities'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(18,15):
+  see declaration of 'seneca::Utilities::setDelimiter'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(9,8):
+  see declaration of 'seneca::Utilities'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(99,23): error C2039: 'extractToken': is not a member of 'seneca::Utilities'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(9,8):
+  see declaration of 'seneca::Utilities'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(100,35): error C3536: 'token': cannot be used before it is initialized
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(100,58): error C2248: 'seneca::Utilities::getFieldWidth': cannot access private member declared in class 'seneca::Utilities'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(16,10):
+  see declaration of 'seneca::Utilities::getFieldWidth'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(9,8):
+  see declaration of 'seneca::Utilities'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(109,63): error C2039: 'Station': is not a member of 'seneca'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(7,11):
+  see declaration of 'seneca'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(109,63): error C2065: 'Station': undeclared identifier
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(109,48): error C2923: 'std::vector': 'Station' is not a valid template type argument for parameter '_Ty'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(109,63):
+  see declaration of 'Station'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(109,48): error C2976: 'std::vector': too few template arguments
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(436,1):
+  see declaration of 'std::vector'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(121,11): error C2039: 'Station': is not a member of 'seneca'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(7,11):
+  see declaration of 'seneca'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(121,11): error C2065: 'Station': undeclared identifier
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(121,19): error C2146: syntax error: missing ';' before identifier 'newItem'
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(121,19): error C3861: 'newItem': identifier not found
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,35): error C2065: 'newItem': undeclared identifier
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,14): error C2663: 'std::vector<_Ty,_Alloc>::push_back': no overloaded function has valid conversion for 'this' pointer
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(874,23):
+  could be 'void std::vector<_Ty,_Alloc>::push_back(_Ty &&)'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,14):
+  	'void std::vector<_Ty,_Alloc>::push_back(_Ty &&)': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,3):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,3):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(870,23):
+  or       'void std::vector<_Ty,_Alloc>::push_back(const _Ty &)'
+  	C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,14):
+  	'void std::vector<_Ty,_Alloc>::push_back(const _Ty &)': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,3):
+  		Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+  		C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,3):
+  		Conversion requires a second user-defined-conversion operator or constructor
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\tester_1.cpp(122,14):
+  while trying to match the argument list '()'
+  
+  tester_2.cpp
+  tester_3.cpp
+  Utilities.cpp
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.h(23,2): error C2255: 'friend': not allowed outside of a class definition
+  (compiling source file 'Utilities.cpp')
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(20,3): error C2664: 'char *strcpy(char *,const char *)': cannot convert argument 1 from 'char' to 'char *'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(20,10):
+  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\string.h(130,1):
+  see declaration of 'strcpy'
+  C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(20,3):
+  while trying to match the argument list '(char, char)'
+  
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(81,4): error C2059: syntax error: 'if'
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(81,41): error C2143: syntax error: missing ';' before '{'
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(85,4): error C2181: illegal else without matching if
+C:\Users\Bpars\Workshops\Workshops\workshop4\Project1\Project1\Utilities.cpp(90,2): error C2059: syntax error: '}'
+  Workstation.cpp
+  Generating Code...
