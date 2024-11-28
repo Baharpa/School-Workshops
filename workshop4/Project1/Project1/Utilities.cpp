@@ -1,14 +1,27 @@
+/*
+Name : Bahar Parsaeian
+Email: bparsaeian@myseneca.ca
+Student ID: 118314210
+Date: 2024-11-27
+
+Academic Integrity:
+I declare that this submission is the result of my own work 
+and I only copied the code that my professor provided to complete my workshops and assignments. 
+This submitted piece of work has not been shared with any other student or 3rd party content provider.
+
+*/
+
 #include <iostream>
-#include <string>
-#include <cstring>
+#include <sstream>
+#include <algorithm>
 #include "Utilities.h"
 namespace seneca {
 	char Utilities::m_delimiter{};
 
 	void Utilities::setFieldWidth(size_t newWidth) {
-		if (newWidth) {
+		
 			m_widthField = newWidth;
-		}
+		
 	}
 
 	size_t Utilities::getFieldWidth() const {
@@ -90,14 +103,25 @@ namespace seneca {
 			
 			}
 
-			next_pos = (std::string::npos) ? std::string::npos : isItFound + 1; 
+			next_pos = isItFound + 1;
 
-			// std::string::npos would be the same value of isItFound if not found
-			more = (isItFound != std::string::npos) && !theToken.empty();
+			if (isItFound == std::string::npos)
+			{
+				more = false;
+			}
+			else
+			{
+				if (!theToken.empty())	more = true;
+			}
+
 
 			theToken.erase(0, theToken.find_first_not_of(' '));
 			
 			theToken.erase(theToken.find_last_not_of(' ') + 1);
+
+
+			m_widthField = (m_widthField < theToken.size()) ? theToken.size() : m_widthField;
+
 		
 			return theToken; 
 	}
