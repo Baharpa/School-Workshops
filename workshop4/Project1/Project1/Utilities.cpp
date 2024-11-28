@@ -40,6 +40,10 @@ namespace seneca {
 
 	/*
 
+		Info needed for extractTOen function: 
+
+
+
 		Nighttable|Desk
 		Dresser|Armchair
 		Filing Cabinet|Bookcase
@@ -98,7 +102,7 @@ namespace seneca {
 
 			// checking to see if the index is found right at the starting point 
 			if (isItFound == next_pos) {
-				more = true; 
+				more = false; 
 				throw "ERROR: No token.";
 			
 			}
@@ -111,7 +115,8 @@ namespace seneca {
 			}
 			else
 			{
-				if (!theToken.empty())	more = true;
+				if (!theToken.empty())	
+				more = true;
 			}
 
 
