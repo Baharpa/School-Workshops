@@ -19,13 +19,20 @@ This submitted piece of work has not been shared with any other student or 3rd p
 
 namespace seneca
 {
+
+	// important and have to do this for static: 
 	size_t Station::m_widthField{ 0 };
 	size_t Station::id_generator{ 0 };
 
-	Station::Station()
-	{
+
+	//constructor and destructor: 
+	Station::Station(){
+	}
+	Station::~Station(){
 	}
 
+
+	//setting everything
 	Station::Station(const std::string& record)
 	{
 		id_generator++;
@@ -34,10 +41,8 @@ namespace seneca
 		size_t pos = 0u;
 		std::vector<std::string> tokens;
 
-		while (more)
-		{
-			if (tokens.size() == 3 && m_widthField < util.getFieldWidth())
-			{
+		while (more){
+			if (tokens.size() == 3 && m_widthField < util.getFieldWidth()){
 				m_widthField = util.getFieldWidth();
 			}
 			tokens.push_back(util.extractToken(record, pos, more));
@@ -52,29 +57,26 @@ namespace seneca
 	}
 
 
-	Station::~Station()
-	{
-	}
-
-	const std::string& Station::getItemName() const
-	{
+	
+	//getting: 
+	
+	const std::string& Station::getItemName() const{
 		return m_name;
 	}
 
-	size_t Station::getNextSerialNumber()
-	{
+
+	size_t Station::getNextSerialNumber(){
 		return m_serial++;
 	}
 
-	size_t Station::getQuantity() const
-	{
+
+	size_t Station::getQuantity() const{
 		return m_stock;
 	}
 
-	void Station::updateQuantity()
-	{
-		if (m_stock > 0)
-		{
+
+	void Station::updateQuantity(){
+		if (m_stock > 0){
 			m_stock--;
 		}
 	}

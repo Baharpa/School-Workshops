@@ -24,10 +24,6 @@ namespace seneca
 	size_t CustomerOrder::m_widthField{};
 
 
-	//default constructor
-	CustomerOrder::CustomerOrder() = default; 
-
-
 	/*
 	
 	a custom 1-argument constructor that takes a reference 
@@ -39,8 +35,7 @@ namespace seneca
 	Order Name
 	the list of items making up the order (at least one item)
 	*/
-	CustomerOrder::CustomerOrder(const std::string& record)
-	{
+	CustomerOrder::CustomerOrder(const std::string& record){
 		bool more = true;
 		
 		Utilities util;
@@ -78,19 +73,17 @@ namespace seneca
 	}
 
 
-	// This operator should "promise" that it doesn't throw exceptions.
-	CustomerOrder::CustomerOrder(const CustomerOrder& src)
-	{
+	CustomerOrder::CustomerOrder(const CustomerOrder& src){
 		throw "Error";
 	}
+	// This operator should "promise" that it doesn't throw exceptions.
 
-	CustomerOrder::CustomerOrder(CustomerOrder&& src) noexcept
-	{
+	CustomerOrder::CustomerOrder(CustomerOrder&& src) noexcept{
 		*this = std::move(src);
 	}
+	// This operator should "promise" that it doesn't throw exceptions.
 
-	CustomerOrder& CustomerOrder::operator=(CustomerOrder&& src) noexcept
-	{
+	CustomerOrder& CustomerOrder::operator=(CustomerOrder&& src) noexcept{
 		if (this != &src)
 		{
 			for (size_t i = 0; i < m_cntItem; i++){
@@ -130,8 +123,7 @@ namespace seneca
 
 
 	//destructor for the ** is to delete the [i] and delete the enitre thing with [] too
-	CustomerOrder::~CustomerOrder()
-	{
+	CustomerOrder::~CustomerOrder(){
 		for (size_t i = 0; i < m_cntItem; i++){
 			delete m_lstItem[i];
 		}
@@ -142,8 +134,7 @@ namespace seneca
 	// bool functions fro seeting if item and orders are filled: 
 
 
-	bool CustomerOrder::isItemFilled(const std::string& itemName) const
-	{
+	bool CustomerOrder::isItemFilled(const std::string& itemName) const{
 		bool result = true;
 
 		for (size_t i = 0; i < m_cntItem; i++){
@@ -187,8 +178,7 @@ namespace seneca
 
 	*/
 	
-	void CustomerOrder::fillItem(Station& station, std::ostream& os)
-	{
+	void CustomerOrder::fillItem(Station& station, std::ostream& os){
 		bool done = false;
 
 		for (size_t i = 0; i < m_cntItem && !done; i++){
